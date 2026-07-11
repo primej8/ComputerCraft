@@ -1,7 +1,6 @@
 peripheral.find("modem", rednet.open)
 
-settings.load("config.txt")
-local target_id = settings.get("target_id")
+local target_id = settings.get("primej8.target_id")
 
 while true do
     g_x, g_y, g_z = gps.locate()
