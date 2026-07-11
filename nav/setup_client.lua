@@ -5,7 +5,7 @@ local urls = {
     "raw.githubusercontent.com/primej8/ComputerCraft/refs/heads/main/nav/client/come.lua",
     "raw.githubusercontent.com/primej8/ComputerCraft/refs/heads/main/nav/client/stop.lua"
 }
-for l in urls do
+for i, l in ipairs(urls) do
     shell.run("wget", l)
 end
 
@@ -15,7 +15,9 @@ settings.define("primej8.target_id", {
 })
 
 if #args > 0 then
-    if type(args[1] == "number") then
+    local target_id = tonumber(args[1])
+    if target_id then
+        settings.set("primej8.target_id", target_id)
         settings.save()
     else
         print("Incorect arguments")
