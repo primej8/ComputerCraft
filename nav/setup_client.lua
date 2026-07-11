@@ -1,9 +1,9 @@
 local args = { ... }
 
 local urls = {
-    "raw.githubusercontent.com/primej8/ComputerCraft/refs/heads/main/nav/client/goto.lua",
-    "raw.githubusercontent.com/primej8/ComputerCraft/refs/heads/main/nav/client/come.lua",
-    "raw.githubusercontent.com/primej8/ComputerCraft/refs/heads/main/nav/client/stop.lua"
+    "https://raw.githubusercontent.com/primej8/ComputerCraft/refs/heads/main/nav/client/goto.lua",
+    "https://raw.githubusercontent.com/primej8/ComputerCraft/refs/heads/main/nav/client/come.lua",
+    "https://raw.githubusercontent.com/primej8/ComputerCraft/refs/heads/main/nav/client/stop.lua"
 }
 for i, l in ipairs(urls) do
     shell.run("wget", l)
